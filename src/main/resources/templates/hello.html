@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+   xmlns:th="http://www.thymeleaf.org">
+<head>
+<title> Example Page</title>
+
+</head>
+
+<body>
+	<h5 th:text="#{app.title}">App Title</h5>
+	<table>
+	<thead>
+	<tr>
+		<th>Id</th>
+		<th>Name</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr th:each="players : ${players}">
+	
+	<td th:text="${players.id}">Id</td>
+	<td th:text="${players.first_name}">Name</td>
+	</tr>
+	</tbody>
+	
+	</table>
+</body>
+
+
+</html>
